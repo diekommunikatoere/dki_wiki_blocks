@@ -52,3 +52,12 @@ wp-config.php
 # Note: if you want to stage/commit system files
 # you can delete this whole section/until End of system files.
 .DS_Store
+
+# Source files
+# Note: if you want to stage/commit source files
+# you can delete this whole section/until End of source files.
+/blocks/*/node_modules/
+/blocks/*/src/
+/blocks/*/package.json
+/blocks/*/package-lock.json
+/blocks/*/.gitignore
