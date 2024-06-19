@@ -53,10 +53,17 @@ wp-config.php
 # you can delete this whole section/until End of system files.
 .DS_Store
 
+# VS Code files for those working on multiple tools
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
 # Source files
 # Note: if you want to stage/commit source files
 # you can delete this whole section/until End of source files.
-*/node_modules/
 */src/
 */package.json
 */package-lock.json
