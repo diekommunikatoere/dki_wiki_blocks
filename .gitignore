@@ -46,3 +46,9 @@ wp-config.php
 # Note: If you wish to whitelist themes,
 # uncomment the next line
 #/wp-content/themes
+
+# System files
+#
+# Note: if you want to stage/commit system files
+# you can delete this whole section/until End of system files.
+.DS_Store
