@@ -64,7 +64,7 @@ Generell ist zu empfehlen, die Entwicklungsumgebung lokal zu betreiben. Dafür b
 4. `cd block-name` ausführen
 5. `npm start` ausführen
 
-### Setup - Deployment
+## Deployment
 
 1. Änderungen in `dev` testen
 2. `npm run build` ausführen
