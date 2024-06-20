@@ -1,26 +1,29 @@
-name: Deploy to Server
+name: Pull Repository to Server
 
 on:
   push:
     branches:
-      - main  # Adjust this if you want to deploy on a different branch
+      - main
+  workflow_dispatch:
 
 jobs:
-  deploy:
+  pull:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
+        
+      - name: Set up SSH
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIV_KEY }}
 
-    - name: Set up SSH
-      uses: webfactory/ssh-agent@v0.5.4
-      with:
-        ssh-private-key: ${{ secrets.SSH_PRIV_KEY }}
-
-    - name: Copy files via rsync
-      env:
-        USER_IP: ${{ secrets.USER_IP }}
-        TARGET: ${{ secrets.TARGET }}
-      run: |
-        rsync -avz --delete domains/diekommunikatoere.de/public_html/hub/wp-content/plugins/dki_wiki_blocks/ $USER_IP:$TARGET
+      - name: Pull Repository
+        run: |
+          ssh -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_HOST "
+          cd $TARGET &&
+          git clone git@github.com:diekommunikatoere/dki_wiki_blocks.git ."
+        env:
+          SERVER_USER: ${{ secrets.SERVER_USER }}
+          SERVER_HOST: ${{ secrets.SERVER_IP }}
