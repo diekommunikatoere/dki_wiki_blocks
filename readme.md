@@ -1,6 +1,6 @@
-# DEV BRANCH
+# DKI Wiki Blocks
 
-Branch für die Entwicklung von neuen Features.
+Ein WordPress-Plugin, das speziell für das DKI Wiki entwickelt wurde. Es enthält Blöcke, die speziell für das DKI Wiki entwickelt wurden.
 
 ## Übersicht
 
@@ -10,15 +10,28 @@ Branch für die Entwicklung von neuen Features.
 
 ## Struktur
 
+### Build
+
 ```plaintext
 dki_wiki_blocks.php
-│
-├── /blocks
-│   ├── /block-name
-│   │   ├── block-name.php
-│   │   ├── /build (Wird von @wordpress/wp-scripts via @wordpress/create-block erstellt)
-│   │   ├── /src
+└── /blocks
+    └── /block-name
+        ├── block-name.php
+        └── /build  (Wird von @wordpress/wp-scripts 
+                    via @wordpress/create-block erstellt)
+```
 
+### Dev
+
+```plaintext
+dki_wiki_blocks.php
+└── /blocks
+    └── /block-name
+        ├── block-name.php
+        ├── /src
+        ├── /node_modules
+        └── /build  (Wird von @wordpress/wp-scripts 
+                    via @wordpress/create-block erstellt)
 ```
 
 ## Entwicklung
