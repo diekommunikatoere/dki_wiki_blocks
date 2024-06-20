@@ -23,4 +23,4 @@ jobs:
         USER_IP: ${{ secrets.USER_IP }}
         TARGET: ${{ secrets.TARGET }}
       run: |
-        rsync -avz --delete -e 'ssh -o StrictHostKeyChecking=no' home/u562830763/domains/diekommunikatoere.de/public_html/hub/wp-content/plugins/dki_wiki_blocks/ $USER_IP:$TARGET
+        rsync -avz --delete -e 'ssh -o StrictHostKeyChecking=no' ./domains/diekommunikatoere.de/public_html/hub/wp-content/plugins/dki_wiki_blocks/ $USER_IP:$TARGET
