@@ -24,4 +24,4 @@ jobs:
         TARGET: ${{ secrets.TARGET }}
         PASSWORD: ${{ secrets.PASSWORD }}
       run: |
-        rsync -avz --delete home/u562830763/domains/diekommunikatoere.de/public_html/hub/wp-content/plugins/dki_wiki_blocks/ $USER_IP:$TARGET
+        sshpass -p $PASSWORD rsync -avz --delete home/u562830763/domains/diekommunikatoere.de/public_html/hub/wp-content/plugins/dki_wiki_blocks/ $USER_IP:$TARGET
