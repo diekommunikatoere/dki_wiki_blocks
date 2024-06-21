@@ -23,7 +23,9 @@ jobs:
         run: |
           ssh -p 65002 -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_HOST "
           cd domains/diekommunikatoere.de/public_html/hub/wp-content/plugins/dki_wiki_blocks &&
-          git pull git@github.com:diekommunikatoere/dki_wiki_blocks.git "
+          git init --inital-branch main &&
+          git remote add origin git@github.com:diekommunikatoere/dki_wiki_blocks.git &&
+          git pull origin "
         env:
           SERVER_USER: ${{ secrets.SERVER_USER }}
           SERVER_HOST: ${{ secrets.SERVER_IP }}
