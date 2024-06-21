@@ -24,7 +24,7 @@ jobs:
           ssh -p 65002 -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_HOST "
           echo 'LS 01: ' &&
           ls &&
-          cd domains/diekommunikatoere.de/public_html/hub/wp-content/plugins/ &&
+          cd domains/diekommunikatoere.de/public_html/hub/wp-content/plugins/dki_wiki_blocks &&
           echo 'LS 02: ' &&
           ls "
         env:
