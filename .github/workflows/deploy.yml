@@ -38,7 +38,8 @@ jobs:
 
       - name: Debug Information
         run: |
-          cd ./home/u562830763/domains/diekommunikatoere.de/public_html/hub/wp-content/plugins/dki_wiki_blocks &&
+          ls -al &&
+          cd domains/diekommunikatoere.de/public_html/hub/wp-content/plugins/dki_wiki_blocks &&
           echo 'Current directory: $(pwd)' &&
           echo 'Listing directory contents:' &&
           ls -al &&
@@ -48,7 +49,7 @@ jobs:
       - name: Pull Repository
         run: |
           ssh -p 65002 -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_HOST "
-          cd ./home/u562830763/domains/diekommunikatoere.de/public_html/hub/wp-content/plugins/dki_wiki_blocks &&
+          cd domains/diekommunikatoere.de/public_html/hub/wp-content/plugins/dki_wiki_blocks &&
           if git remote | grep -q origin; then
             echo 'Remote origin exists, setting URL...'
             git remote set-url origin git@github.com:diekommunikatoere/dki_wiki_blocks.git
