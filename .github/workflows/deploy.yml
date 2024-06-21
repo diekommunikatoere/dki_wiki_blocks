@@ -39,6 +39,8 @@ jobs:
       - name: Debug Information
         run: |
           ls -al &&
+          echo 'Git remotes:' &&
+          git remote -v
           cd domains/diekommunikatoere.de/public_html/hub/wp-content/plugins/dki_wiki_blocks &&
           echo 'Current directory: $(pwd)' &&
           echo 'Listing directory contents:' &&
