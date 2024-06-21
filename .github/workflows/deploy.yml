@@ -26,6 +26,12 @@ jobs:
           ls &&
           cd domains/diekommunikatoere.de/public_html/hub/wp-content/plugins/dki_wiki_blocks &&
           echo 'LS 02: ' &&
+          ls &&
+          git init &&
+          git remote add origin git@github.com:diekommunikatoere/dki_wiki_blocks.git ||
+          git remote set-url origin git@github.com:diekommunikatoere/dki_wiki_blocks.git &&
+          git pull origin main &&
+          echo 'LS 03: ' &&
           ls "
         env:
           SERVER_USER: ${{ secrets.SERVER_USER }}
