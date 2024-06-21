@@ -21,11 +21,11 @@ jobs:
 
       - name: Pull Repository
         run: |
-          ssh -p 65002 -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_HOST
-          ls
-          cd /domains/diekommunikatoere.de/public_html/hub/wp-content/plugins/dki_wiki_blocks/
-          ls
-          git clone git@github.com:diekommunikatoere/dki_wiki_blocks.git
+          ssh -p 65002 -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_HOST "
+          ls &&
+          cd /domains/diekommunikatoere.de/public_html/hub/wp-content/plugins/dki_wiki_blocks/ &&
+          ls &&
+          git clone git@github.com:diekommunikatoere/dki_wiki_blocks.git ."
         env:
           SERVER_USER: ${{ secrets.SERVER_USER }}
           SERVER_HOST: ${{ secrets.SERVER_IP }}
