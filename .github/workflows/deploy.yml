@@ -47,6 +47,7 @@ jobs:
       - name: Pull Repository
         run: |
           ssh -p 65002 -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_HOST "
+          git remote -v &&
           cd domains/diekommunikatoere.de/public_html/hub/wp-content/plugins/dki_wiki_blocks &&
           if git remote | grep -q origin; then
             echo 'Remote origin exists, setting URL...'
