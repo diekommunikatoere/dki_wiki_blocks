@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-        
+
       - name: Set up SSH
         uses: webfactory/ssh-agent@v0.9.0
         with:
@@ -30,9 +30,11 @@ jobs:
         run: |
           ssh -p 65002 -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_HOST "
           cd domains/diekommunikatoere.de/public_html/hub/wp-content/plugins/dki_wiki_blocks &&
+          if git remote | grep -q origin; then git remote remove origin; fi &&
           git remote add origin git@github.com:diekommunikatoere/dki_wiki_blocks.git &&
           git pull origin main "
         env:
           SERVER_USER: ${{ secrets.SERVER_USER }}
           SERVER_HOST: ${{ secrets.SERVER_IP }}
           SERVER_TARGET: ${{ secrets.TARGET }}
+
