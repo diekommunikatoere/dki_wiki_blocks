@@ -22,8 +22,10 @@ jobs:
       - name: Pull Repository
         run: |
           ssh -p 65002 -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_HOST "
+          echo "LS #01: " &&
           ls &&
-          cd domains/diekommunikatoere.de/ &&
+          cd domains/diekommunikatoere.de/public_html/hub/wp-content/plugins/ &&
+          echo "LS #02: " &&
           ls "
         env:
           SERVER_USER: ${{ secrets.SERVER_USER }}
