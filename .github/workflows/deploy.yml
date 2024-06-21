@@ -36,13 +36,19 @@ jobs:
           SERVER_USER: ${{ secrets.SERVER_USER }}
           SERVER_HOST: ${{ secrets.SERVER_IP }}
 
-      - name: Pull Repository
+      - name: Debug Information
         run: |
-          ssh -p 65002 -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_HOST "
           cd domains/diekommunikatoere.de/public_html/hub/wp-content/plugins/dki_wiki_blocks &&
           echo 'Current directory: $(pwd)' &&
           echo 'Listing directory contents:' &&
           ls -al &&
+          echo 'Git remotes:' &&
+          git remote -v
+
+      - name: Pull Repository
+        run: |
+          ssh -p 65002 -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_HOST "
+          cd domains/diekommunikatoere.de/public_html/hub/wp-content/plugins/dki_wiki_blocks &&
           if git remote | grep -q origin; then
             echo 'Remote origin exists, setting URL...'
             git remote set-url origin git@github.com:diekommunikatoere/dki_wiki_blocks.git
