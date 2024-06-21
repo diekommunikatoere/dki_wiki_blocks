@@ -19,6 +19,9 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIV_KEY }}
 
+      - name: Add server to known hosts
+        run: echo "${{ secrets.SSH_KNOWN_HOSTS }}" >> ~/.ssh/known_hosts
+
       - name: Pull Repository
         run: |
           ssh -p 65002 -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_HOST "
