@@ -2,10 +2,10 @@
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
 	"name": "dki-wiki/edit-docs-page",
-	"version": "0.1.0",
-	"title": "Docs Page Edit Link",
+	"version": "0.2.0",
+	"title": "Docs Page Edit Links",
 	"category": "widgets",
-	"description": "Inserts a link to edit the currently opened BetterDocs page.",
+	"description": "Inserts links to edit the currently opened BetterDocs page.",
 	"example": {},
 	"attributes": {
 		"isButton": {

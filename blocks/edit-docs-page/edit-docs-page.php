@@ -1,17 +1,17 @@
 <?php
 /**
- * Plugin Name:       Docs Page Edit Link
- * Plugin URI:        https://hub.diekommunikatoere.de
- * Description:       Inserts a link to edit the currently opened BetterDocs page.
- * Requires at least: 6.1
- * Requires PHP:      7.0
- * Version:           0.1.0
- * Author:            Steven Sullivan, Jörg Hegner
- * License:           GPL-2.0-or-later
- * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       edit-docs-page
+ * Plugin Name:         Docs Page Edit Links
+ * Plugin URI:          https://hub.diekommunikatoere.de
+ * Description:         Inserts a link to edit the currently opened BetterDocs page.
+ * Requires at least:   6.5
+ * Requires PHP:        7.0
+ * Version:             0.2.0
+ * Author:              Steven Sullivan, Jörg Hegner
+ * License:             GPL-2.0-or-later
+ * License URI:         https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain:         edit-docs-page
  *
- * @package DkiWiki
+ * @package dki-wiki-blocks
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

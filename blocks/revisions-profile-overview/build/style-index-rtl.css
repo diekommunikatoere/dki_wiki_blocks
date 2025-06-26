@@ -1,0 +1,87 @@
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.revisions {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  background-color: var(--wp--preset--color--background-alt);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.revisions h3 {
+  width: 100%;
+}
+.revisions .revision-list {
+  box-sizing: border-box;
+  width: 100%;
+}
+.revisions .revision-list table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 1rem;
+}
+.revisions .revision-list table thead {
+  border-bottom: 1px solid var(--wp--preset--color--background);
+}
+.revisions .revision-list table thead th {
+  text-align: right;
+  padding: 0.5rem;
+}
+.revisions .revision-list table tbody {
+  /* tr:nth-child(even) {
+  	background-color: var(--wp--preset--color--background);
+  } */
+}
+.revisions .revision-list table tbody tr:not(:last-child) {
+  border-bottom: 1px solid var(--wp--preset--color--background);
+}
+.revisions .revision-list table tbody td {
+  padding: 0.5rem;
+}
+.revisions .revision-list table tbody td.author {
+  display: flex;
+  align-items: center;
+}
+.revisions .revision-list table tbody td.author .avatar {
+  margin-left: 0.5rem;
+  border-radius: 100px;
+  overflow: hidden;
+}
+.revisions .revision-list table tbody td.links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+.revisions .revision-list table tbody td.links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background-color: var(--wp--preset--color--tertiary);
+  color: var(--wp--preset--color--background);
+  padding: 0.7rem;
+  border-radius: 100px;
+  transition: background-color 0.1s, color 0.1s;
+}
+.revisions .revision-list table tbody td.links a svg {
+  height: 1rem;
+  width: 1rem;
+  fill: var(--wp--preset--color--background);
+  transition: fill 0.1s;
+}
+.revisions .revision-list table tbody td.links a:hover {
+  background-color: var(--wp--preset--color--secondary);
+}
+.revisions .revision-list table tbody td.links a:hover svg {
+  fill: var(--wp--preset--color--contrast);
+}
